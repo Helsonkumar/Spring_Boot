@@ -38,7 +38,7 @@ public class Controller1 {
     }
 
     @GetMapping("/user/{id}")
-    public User getUserId(@PathVariable Integer id){
+    public User getUserId(@PathVariable Integer id) throws UserNotFoundException {
             return user_service.retrieveUser(id);
     }
 
