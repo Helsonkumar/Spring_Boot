@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-
 //This is a common bean which is thrown aways via the ExcetpionHandlers.
 public class GeneralException {
       private String message;

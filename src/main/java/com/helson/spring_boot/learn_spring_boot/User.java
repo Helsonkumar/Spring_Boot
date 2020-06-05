@@ -1,15 +1,25 @@
 package com.helson.spring_boot.learn_spring_boot;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
-@Component
+import javax.validation.constraints.Size;
+
+@Validated
 public class User {
 
     private Integer id;
+
+    //This is the validation annotation.
+    @Size(min=3, message = "Name is not of the expected length")
     private String name;
     private Integer age;
+
+    @JsonIgnore  //** To ignore this field in teh Response Body.
     private String city;
+
     private String sex;
 
     public User(){

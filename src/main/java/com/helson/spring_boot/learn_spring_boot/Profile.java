@@ -1,5 +1,9 @@
 package com.helson.spring_boot.learn_spring_boot;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
+
+//We add this just to denote this bean is dynamically filtered.
+@JsonFilter("ProfileBeanFilter")
 public class Profile {
 
     private String name;
